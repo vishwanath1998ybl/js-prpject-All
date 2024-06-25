@@ -1,66 +1,59 @@
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-
-.black-document {
-    height: 100vh;
-    width: 100vw;
-    background-color: rgb(23, 23, 23);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+body{
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+}
+#form{
+    width: 500px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    font-size: 12px;
 }
 
-.three-dots {
-    font-size: 40px;
-    color: white;
-    position: absolute;
-    top: 3%;
-    left: 45%; 
-    cursor: pointer;
-}
-
-.three-dots.hidden{
-    display: none;
-}
-
-.container {
-    height: 100vh;
-    width: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    overflow-x: hidden;
-    transition: all 0.5s;
-    background-color: orange;
-}
-
-.cut {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-.nav ul {
+h1{
+    border-bottom: 1px solid black;
     text-align: center;
-    height: 100vh;
-    width: 50vw;
+    margin-bottom: 20px;
+}
+.form-control {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    list-style: none;
 }
 
-.nav ul li a {
-    text-decoration: none;
-    font-size: 40px;
-    color: #ffffff;
+.form-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
 }
+
+#form #btn {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: rgb(41, 57, 194);
+    border: none;
+    border-radius: 4px;
+}
+
+.form-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
+    margin: 10px;
+}
+.form-control.success input{
+border-color:  green;
+}
+
+.form-control.error input{
+    border-color:  red;
+    }

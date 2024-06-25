@@ -1,1 +1,1 @@
-Better example of slider for beGinners
+Form Validation 
