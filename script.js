@@ -1,19 +1,14 @@
-let input= document.getElementById("input");
-let button = document.querySelectorAll("button");
+const threeDots = document.querySelector('.three-dots');
+const container = document.querySelector('.container');
 
-button.forEach(element => {
-    element.addEventListener("click",(e)=>{
-           console.log(e.target.textContent)
+threeDots.addEventListener('click', () => {
+    container.style.width = '50vw';
+    threeDots.classList.toggle("hidden");
+});
 
-    if (e.target.textContent === "C") {
-      input.innerText= "";
-    } else if (e.target.textContent === "<") {
-      input.innerText = input.innerText.slice(0, -1);
-    } else if (e.target.textContent === "=") {
-      input.innerText = eval(input.innerText);
-    } else {
-      input.innerText += e.target.textContent;
-    }       
-    input.scrollLeft = input.scrollWidth;  
-    })
+const cut = document.querySelector('.cut');
+
+cut.addEventListener('click', () => {
+    container.style.width = '0';
+    threeDots.classList.remove("hidden");
 });

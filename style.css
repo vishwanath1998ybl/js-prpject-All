@@ -1,56 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,500&display=swap');
-*{
-    padding:0;
-    margin::0;
-    box-sizing:border-box;
-    font-family: 'Josefin Sans', sans-serif;
-}
-body{
-    background-color:#db6868;
-}
-.container{
-    height:100vh;
-    width:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border:none;
-}
-.calc{
-    padding:20px;
-    border-radius:20px;
-    background: transparent;
-    border:none;
-    box-shadow: -1px -1px 10px 10px rgba(189,97,97,0.8)
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#input{
-    width:100%;
-    max-width:400px;
-    border-radius:20px;
-    height:100px;
-    border:none;
-    background:transparent;
-    text-align:center;
-    margin:10px;
-    font-size:60px;
-    overflow: hidden;
-    color:#ffffff;
-    cursor:pointer;
+.black-document {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(23, 23, 23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
-
-button{
-    border:none;
-    margin:10px;
-    width:80px;
-    height:80px;
-    border-radius:50%;
-    cursor:pointer;
-    background:transparent;
-    box-shadow:6px 6px 10px rgba(190,97,97,1),-6px -6px 10px rgba(190,97,97,1);
-
+.three-dots {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 3%;
+    left: 45%; 
+    cursor: pointer;
 }
-.new{
-    box-shadow: inset 6px 6px 10px rgba(189,97,97,.5), inset -6px -6px 10px rgba(189,97,97,.9);
+
+.three-dots.hidden{
+    display: none;
+}
+
+.container {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all 0.5s;
+    background-color: orange;
+}
+
+.cut {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.nav ul {
+    text-align: center;
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    font-size: 40px;
+    color: #ffffff;
 }
